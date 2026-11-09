@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JELAJAH KOTA | Smart Tourism Jakarta</title>
+
+    <!-- Leaflet CSS untuk peta -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="logo">JELAJAH<span>KOTA.</span></a>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#eksplorasi">Destinasi</a>
+            <a href="#peta">Peta Wisata</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <p class="eyebrow">SMART URBAN TOURISM PLATFORM</p>
+
+            <h1>Jelajahi Jakarta,<br>
+                Temukan Ceritanya.</h1>
+
+            <p>
+                Temukan destinasi wisata, akses transportasi,
+                dan pengalaman menjelajahi kota dalam satu platform.
+            </p>
+
+            <a href="#eksplorasi" class="primary-button">
+                Mulai Eksplorasi
+            </a>
+        </div>
+    </section>
+
+    <!-- DESTINATION SECTION -->
+    <main>
+        <section class="destination-section" id="eksplorasi">
+
+            <div class="section-heading">
+                <p class="eyebrow">DISCOVER THE CITY</p>
+                <h2>Jelajahi Destinasi Jakarta</h2>
+                <p>Temukan tempat menarik untuk perjalanan berikutnya.</p>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-area">
+                <input
+                    type="text"
+                    id="searchDestination"
+                    placeholder="Cari nama destinasi..."
+                >
+            </div>
+
+            <!-- FILTER -->
+            <div class="filter-area">
+                <button class="filter-button active" data-category="Semua">
+                    Semua
+                </button>
+
+                <button class="filter-button" data-category="Museum">
+                    Museum
+                </button>
+
+                <button class="filter-button" data-category="Landmark">
+                    Landmark
+                </button>
+
+                <button class="filter-button" data-category="Taman">
+                    Taman
+                </button>
+            </div>
+
+            <!-- DESTINATION CARDS -->
+            <div class="destination-grid" id="destinationList">
+                <!-- Kartu destinasi dibuat melalui JavaScript -->
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Destinasi tidak ditemukan.
+            </p>
+
+        </section>
+
+        <!--Detail Destinasi-->
+        <section class="detail-section" id="destinationDetail" hidden>
+
+            <button id="backButton" class="back-button">
+                ← Kembali ke Destinasi
+            </button>
+
+            <div id="detailContent">
+                <!--Konten detail dibuat oleh JavaScript-->
+            </div>
+            
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class="map-section" id="peta">
+            <div class="section-heading">
+                <p class="eyebrow">SMART TRANSPORTATION</p>
+                <h2>Jelajahi Lokasi Wisata</h2>
+                <p>Lihat persebaran destinasi wisata di Jakarta.</p>
+            </div>
+
+            <div id="map"></div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="tentang">
+            <p class="eyebrow">ABOUT THE PLATFORM</p>
+            <h2>Tentang JELAJAH KOTA</h2>
+
+            <p>
+                JELAJAH KOTA merupakan platform smart tourism
+                yang membantu wisatawan menemukan destinasi,
+                mengenali akses transportasi, dan merencanakan
+                perjalanan wisata perkotaan.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 JELAJAH KOTA. Smart Urban Tourism Platform.</p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Data dan aplikasi -->
+    <script src="JS/destinations.js"></script>
+    <script src="JS/app.js"></script>
+
+</body>
+</html>
